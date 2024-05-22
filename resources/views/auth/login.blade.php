@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="bg-gradient-primary d-flex align-items-center justify-content-center">
+<body class="bg-light d-flex align-items-center justify-content-center">
 
     <div class="container w-50">
 
@@ -24,13 +24,13 @@
 
             <div class="col-xl-10 col-lg-12 col-md-9 w-50">
 
-                <div class="card o-hidden border-0 shadow-lg my-5 ">
+                <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="py-4 px-5 my-auto">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4 fs-2">Bem-vindo de volta!</h1>
+                                        <h1 class="h4 mb-4 fs-2">Bem-vindo de volta!</h1>
                                     </div>
                                     <form method="POST" action="{{ route('login') }}" class="user">
                                         @csrf

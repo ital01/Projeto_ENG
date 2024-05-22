@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="bg-gradient-primary d-flex align-items-center justify-content-center">
+<body class="bg-light d-flex align-items-center justify-content-center">
     <div class="container w-50">
         <div class="row justify-content-center">
             <div class="col-xl-10 col-lg-12 col-md-9 w-50">

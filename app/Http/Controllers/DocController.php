@@ -50,7 +50,7 @@ class DocController extends Controller
         return response()->json(['encoding' => $encoding]);
     }
 
-    public function adicionarDocumentos()
+    public function adicionarDocumentos(Request $request)
     {
         $caminho = "E:\\COMPRESS\\";
     
