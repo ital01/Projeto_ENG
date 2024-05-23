@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Doc;
@@ -52,7 +53,7 @@ class DocController extends Controller
 
     public function adicionarDocumentos(Request $request)
     {
-        $caminho = "E:\\COMPRESS\\";
+        $caminho = "C:\\Users\\italo\\Desktop\\AMOSTRAS\\";
     
         if (!is_dir($caminho)) {
             return response()->json(['message' => 'O caminho fornecido não é válido.'], 400);
@@ -89,16 +90,16 @@ class DocController extends Controller
         $tipo = mime_content_type($arquivoCaminho);
         $conteudo = '';
     
-        // switch ($extensao) {
-        //     case 'pdf':
-        //         $conteudo = $this->extrairTextoPDF($arquivoCaminho);
-        //         break;
-        //     case 'html':
-        //         $conteudo = $this->extrairTextoHtml($arquivoCaminho);
-        //         break;
-        //     default:
-        //         return;
-        // }
+        switch ($extensao) {
+            case 'pdf':
+                $conteudo = $this->extrairTextoPDF($arquivoCaminho);
+                break;
+            case 'html':
+                $conteudo = $this->extrairTextoHtml($arquivoCaminho);
+                break;
+            default:
+                return;
+        }
     
         Doc::create([
             'name' => $nomeArquivo . '.' . $extensao,
